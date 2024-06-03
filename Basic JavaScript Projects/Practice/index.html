@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html>
     <body>
-        <script src="async.js" async></script>
+        <!-- Learn to use defer/async in HTML -->
+        <script src="async.js" defer></script>
         <p id="p1">Hello World</p>
+        <br>
+        <br>
+        <h3>Enter your choice:</h3>
+        <input id="fruit_Input" type="text">
+        <button onclick="choice()">Submit</button>
+        <p id="Output"></p>
+        <br>
+        <h1 class="click">The text will change!</h1>
+        <h1 class="click">The text will not change!</h1>
+        <button onclick="Hello_function()">Click me!</button>
+        <br>
+        <br>
+        <canvas id="ID_Name" width="500" height="250" style="border:5px solid black;"></canvas>
 
         <script>
+            // Try to use concatenate in JavaScript
             A = "Always ";
             B = "remember: ";
             document.write(A + B);
@@ -16,6 +31,44 @@
             M = "unique, ";
             N = "just like everyone else.";
             document.write(M + N);
+
+            //  Build a function to use switch
+            function choice() {
+                var n = document.getElementById("fruit_Input").value;
+                var price_output;
+                switch(n) {
+                    case "apple":
+                        price_output = "$ 4 / pound";
+                    break;
+                    case "banana":
+                        price_output = "$ 2 / pound";
+                    break;
+                    case "orange":
+                        price_output = "$ 3 / pound";
+                    break;
+                    default:
+                    price_output = "Unknown price";
+                }
+                document.getElementById("Output").innerHTML = price_output;
+            }
+
+            //  Build a function to use the getElementsByClassName
+            function Hello_function(){
+                let A = document.getElementsByClassName("click");
+                A[0].innerHTML = "The text has changed!";
+            }
+
+            // To build a linear gradient in canvas
+            const c = document.getElementById("ID_Name");
+            const ctx = c.getContext("2d");
+                // Create a Gradient 
+            const grd = ctx.createLinearGradient(0, 0, 170, 0);
+            grd.addColorStop(0, "black");
+            grd.addColorStop(1, "white");
+                // Draw a filled Rectangle
+            ctx.fillStyle = grd;
+            ctx.fillRect(20, 20, 500, 200);
+
         </script>
     </body>
 </html>
