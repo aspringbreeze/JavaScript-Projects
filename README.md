@@ -2,9 +2,9 @@
 Coding projects from JavaScript course in tech academy
 
 ## Projects
-..*Pizza Menu
-..*Tic-Tac-Toe Game
-..*Calculator
+* Pizza Menu
+* Tic-Tac-Toe Game
+* Calculator
 
 ### Pizza Menu
 The project is a menu used to order pizza with a various selection of toppings. It then takes the input information and calculates a price for the order.
